@@ -9,7 +9,7 @@ To build the wheel, invoke `python -m build`. Then install the wheel created in 
 the venv that will be used by the client.
 
 With the server already running with its plugin installed, connect with the pydeehaven client.
-Create a plugin client for the server's RemoteShell instance, then invoke commands on it
+Create a plugin client for the server's RemoteShell instance, then invoke commands on it.
 
 ```python
 from pydeephaven import Session

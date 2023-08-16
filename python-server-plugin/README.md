@@ -15,6 +15,7 @@ access to from the server.
 ```python
 from dhexample.rpc_pickle_server import RemoteShell
 shell = RemoteShell(scope=globals())
+
 def make_string(a, b, c):
     return f"{a} - {b} - {c} #"
 ```
