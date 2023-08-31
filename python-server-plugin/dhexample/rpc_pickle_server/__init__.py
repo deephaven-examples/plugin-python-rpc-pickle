@@ -1,6 +1,6 @@
 import io
 import pickle
-from typing import List, Any, Callable
+from typing import List, Dict, Any, Callable
 
 import deephaven.table
 
@@ -36,7 +36,7 @@ class RemoteShell:
     of a string, for the name of the function to invoke from the scope, and any arguments to pass to that
     function.
     """
-    def __init__(self, scope: dict[str, Callable]):
+    def __init__(self, scope: Dict[str, Callable]):
         """Creates a new RemoteShell instance, with the specified scope to read functions from."""
         if scope is None:
             self.scope = {}
