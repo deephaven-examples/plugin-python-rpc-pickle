@@ -4,8 +4,9 @@ This is an example server-side plugin for Deephaven, providing both a Python cla
 
 To install directly to the current venv, invoke `pip install .` from within this directory.
 
-To build the wheel, invoke `python -m build`. Then install the wheel created in `dist/` to
-the venv that will be used by the server.
+To build the wheel, invoke `python -m build` (you may need to run `pip install build` if the build module is not
+already installed in your environment). Then install the wheel created in `dist/` to the venv that will be used
+by the server.
 
 Once the server is running, the server should have an instance of `dhexample.rpc_pickle_server.RemoteShell` created
 and bound in the global scope so that clients can reference it by name. Construct the instance
