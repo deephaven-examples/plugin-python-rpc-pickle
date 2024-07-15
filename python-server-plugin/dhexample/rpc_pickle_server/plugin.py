@@ -9,6 +9,8 @@ class RemoteShellConnection(MessageStream):
     def __init__(self, shell: RemoteShell, client_connection: MessageStream):
         self.shell = shell
         self.client_connection = client_connection
+        # Send an empty payload to the client to acknowledge successful connection
+        self.client_connection.on_data(b'', [])
 
     def on_data(self, payload: bytes, references: List[Any]):
         result_payload, result_references = self.shell.execute(payload, references)
