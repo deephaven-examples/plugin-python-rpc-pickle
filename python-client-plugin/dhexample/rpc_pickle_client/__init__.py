@@ -44,6 +44,8 @@ class RemoteShellProxy(server_object.ServerObject):
         self.type_ = shell_plugin.type_
         self.ticket = shell_plugin.ticket
         self.shell_plugin = shell_plugin
+        # Consume the first (empty) payload from the server
+        next(self.shell_plugin.resp_stream)
 
     def run(self, func_name: str, *args):
         """
